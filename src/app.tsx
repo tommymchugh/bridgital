@@ -7,6 +7,17 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import styled from 'styled-components';
+
+import {NavBar} from './components/nav_bar';
+
+import {styles as containerStyles} from './styles/container.jss';
+import {styles as appStyles} from './styles/app.jss';
+
+// tslint:disable-next-line: variable-name
+const Container = styled.div`
+  ${containerStyles}
+`;
 
 /**
  * The main interface to all Bridigital UI components.
@@ -18,7 +29,11 @@ class App extends React.Component {
    * @return {JSX.Element} The react element(s) that will be rendered.
    */
   render(): JSX.Element {
-    return <h1>Hello World</h1>;
+    return (
+      <Container>
+        <NavBar />
+      </Container>
+    );
   }
 }
 
@@ -27,5 +42,9 @@ class App extends React.Component {
  * @param {HTMLElement} root The html element the react app will be attach to.
  */
 export function createApp(root: HTMLElement) {
-  ReactDOM.render(<App />, root);
+  // tslint:disable-next-line: variable-name
+  const StyledApp = styled(App)`
+    ${appStyles(null)}
+  `;
+  ReactDOM.render(<StyledApp />, root);
 }

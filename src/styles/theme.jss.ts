@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import {scaffoldApp} from './scaffold';
-import {createApp} from './app';
-import '../static/styles/style.scss';
+const theme = {
+  background: '#E9E9EF',
+  backgroundDark: '#2C3E4D',
+};
 
-const rootElement = scaffoldApp();
-createApp(rootElement);
+export {theme};

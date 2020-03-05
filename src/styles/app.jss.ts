@@ -5,9 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import {scaffoldApp} from './scaffold';
-import {createApp} from './app';
-import '../static/styles/style.scss';
+const styles = (props: {} | null): string => {
+  return ``;
+};
 
-const rootElement = scaffoldApp();
-createApp(rootElement);
+export {styles};
