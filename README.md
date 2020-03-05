@@ -1,4 +1,4 @@
-<img src="bridgital-logo.svg" alt="Bridgital logo: A bridge drawing with Bridgital underneath"/>
+<img src="bridgital-logo.svg" alt="Bridgital logo: A bridge drawing with Bridgital underneath" width="220" style="margin: 0 auto; display: block;"/>
 
 # Bridgital
 
