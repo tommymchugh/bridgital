@@ -1,4 +1,8 @@
-<img src="bridgital-logo.svg" align="center" alt="Bridgital logo: A bridge drawing with Bridgital underneath" width="220" class="logo"/>
+<p align="center">
+    <img src="bridgital-logo.svg"
+         alt="Bridgital logo: A bridge drawing with Bridgital underneath"
+         width="220"/>
+</p>
 
 # Bridgital
 
