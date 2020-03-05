@@ -6,6 +6,8 @@
 
 # Bridgital Inquiry
 
+[![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
+
 **Making engineering, math, and logic explorations fun through bridge building!**
 
 Bridigital provides a simple web interface to design and prototype bridges for stress testing.
