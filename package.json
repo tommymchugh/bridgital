@@ -4,10 +4,10 @@
   "description": "A web app that explores engineering, math, and logic inquiries through bridge building",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm run check && npm run compile && gh-pages -d build",
+    "deploy": "npm run compile && gh-pages -d build",
     "check": "eslint src/**/*.ts src/**/*.tsx && gts check",
     "clean": "gts clean",
-    "compile": "webpack --config webpack.config.js",
+    "compile": "npm run clean && npm run fix && npm run check && webpack --config webpack.config.js",
     "fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
