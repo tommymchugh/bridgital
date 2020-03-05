@@ -2,9 +2,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.ts',
+  entry: './src/index.ts',
     module: {
-        rules: [
+      rules: [
             {
             test: /\.tsx?$/,
             use: 'ts-loader',
