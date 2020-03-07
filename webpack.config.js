@@ -1,8 +1,21 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
+// Build directory info
+const buildDirName = 'build';
+const buildPath = path.resolve(__dirname, buildDirName);
+
+// HTML output details
+// TODO(tommymchugh): Move this into a JS or JSON file
+const websiteTitle = 'Bridgital - Bridges are cool!';
+
 module.exports = {
   entry: './src/index.ts',
+  devServer: {
+    contentBase: buildPath,
+    compress: true,
+    port: 9000,
+  },
   module: {
     rules: [
       {
@@ -13,11 +26,8 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          // Creates `style` nodes from JS strings
           'style-loader',
-          // Translates CSS into CommonJS
           'css-loader',
-          // Compiles Sass to CSS
           'sass-loader',
         ],
       },
@@ -33,12 +43,12 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: buildPath,
     filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Bridgital - Bridges Are Cool',
+      title: websiteTitle,
     }),
   ],
 };

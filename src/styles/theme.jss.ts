@@ -5,9 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const theme = {
-  background: '#E9E9EF',
-  backgroundDark: '#2C3E4D',
+import {Theme} from 'styled-components';
+
+const theme: Theme = {
+  colors: {
+    backgroundLight: '#E9E9EF',
+    backgroundDark: '#2C3E4D',
+  },
 };
 
 export {theme};

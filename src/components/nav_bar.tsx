@@ -6,13 +6,28 @@
  */
 
 import * as React from 'react';
-import styled from 'styled-components';
 import imageLogo from '../../static/images/logo.svg';
-import {styles as containerStyles} from '../styles/nav_bar/navbar_header.jss';
+import styled from 'styled-components';
+import {
+  styles as containerStyles,
+  Component,
+} from '../styles/nav_bar.jss';
 
+/**
+ *
+ */
 // tslint:disable-next-line: variable-name
 const NavBarContainer = styled.div`
-  ${containerStyles(null)}
+  ${containerStyles(Component.Container)}
+`;
+
+/**
+ * Controls the UI and actions of the Bridigital
+ * logo element on the navigiation bar.
+ */
+// tslint:disable-next-line: variable-name
+const LogoBarItem = styled.img`
+  ${containerStyles(Component.LogoBarItem)}
 `;
 
 /**
@@ -21,20 +36,13 @@ const NavBarContainer = styled.div`
  */
 class NavBar extends React.Component {
   /**
+   * Renders the navigation bar and its subcomponents.
    * @return {JSX.Element} The navigation bar including logo
    */
   render(): JSX.Element {
     return (
       <NavBarContainer>
-        <img
-          src={imageLogo}
-          style={{
-            height: '72px',
-            margin: '0px auto',
-            display: 'block',
-            paddingTop: '10px',
-          }}
-        />
+        <LogoBarItem src={imageLogo} />
       </NavBarContainer>
     );
   }

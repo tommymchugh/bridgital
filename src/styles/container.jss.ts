@@ -9,7 +9,7 @@ import {theme} from './theme.jss';
 
 const styles = (props: {} | null): string => {
   return `
-    background-color: ${theme.background};
+    background-color: ${theme.colors.backgroundLight};
     height: 100%;
     width: 100%;
   `;
