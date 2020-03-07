@@ -8,16 +8,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import styled from 'styled-components';
+import {styles} from './styles/app.jss';
 
-import {NavBar} from './components/nav_bar';
-
-import {styles as containerStyles} from './styles/container.jss';
-import {styles as appStyles} from './styles/app.jss';
-
-// tslint:disable-next-line: variable-name
-const Container = styled.div`
-  ${containerStyles}
-`;
+import {Container} from './components/container';
+import {NavBar} from './components/navbar';
+import {Editor} from './components/editor/editor';
 
 /**
  * The main interface to all Bridigital UI components.
@@ -32,6 +27,7 @@ class App extends React.Component {
     return (
       <Container>
         <NavBar />
+        <Editor />
       </Container>
     );
   }
@@ -44,7 +40,7 @@ class App extends React.Component {
 export function createApp(root: HTMLElement) {
   // tslint:disable-next-line: variable-name
   const StyledApp = styled(App)`
-    ${appStyles(null)}
+    ${styles()}
   `;
   ReactDOM.render(<StyledApp />, root);
 }

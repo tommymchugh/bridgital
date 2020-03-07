@@ -5,39 +5,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/*import * as React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
+import {Component, styles} from '../../styles/editor.jss';
 
 // tslint:disable-next-line: variable-name
 const EditorContainer = styled.div`
-  ${containerStyles(null)}
-`;*/
+  ${styles(Component.Container)}
+`;
 
-/**
- * Manages the navigation of the application and highlights
- * the Bridgital logo.
- */
-//class NavBar extends React.Component {
-/**
- * @return {JSX.Element} The navigation bar including logo
- */
-/*  render(): JSX.Element {
-    return (
-      <NavBarContainer>
-        <img
-          src={imageLogo}
-          style={{
-            height: '72px',
-            margin: '0px auto',
-            display: 'block',
-            paddingTop: '10px',
-          }}
-        />
-      </NavBarContainer>
-    );
+class Editor extends React.Component {
+  render(): JSX.Element {
+    return <EditorContainer></EditorContainer>;
   }
 }
 
-const styledNavBar = styled(NavBar)``;
+const styledEditor = styled(Editor)``;
 
-export {styledNavBar as NavBar};*/
+export {styledEditor as Editor};

@@ -5,8 +5,4 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const styles = (props?: {}): string => {
-  return ``;
-};
-
-export {styles};
+export * from './style_generator';

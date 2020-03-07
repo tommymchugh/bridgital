@@ -10,8 +10,12 @@ import {Theme} from 'styled-components';
 const theme: Theme = {
   colors: {
     backgroundLight: '#E9E9EF',
-    backgroundDark: '#2C3E4D',
+    backgroundDark: '#2C3E4D'
   },
+  heights: {
+    navbar: 95,
+    projectPicker: 257
+  }
 };
 
 export {theme};

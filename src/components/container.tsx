@@ -5,8 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const styles = (props?: {}): string => {
-  return ``;
-};
+import styled from 'styled-components';
+import {styles} from '../styles/container.jss';
 
-export {styles};
+const containerElement = styled.div`
+  ${styles()}
+`;
+export {containerElement as Container};

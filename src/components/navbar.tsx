@@ -8,17 +8,14 @@
 import * as React from 'react';
 import imageLogo from '../../static/images/logo.svg';
 import styled from 'styled-components';
-import {
-  styles as containerStyles,
-  Component,
-} from '../styles/nav_bar.jss';
+import {styles, Component} from '../styles/navbar.jss';
 
 /**
  *
  */
 // tslint:disable-next-line: variable-name
 const NavBarContainer = styled.div`
-  ${containerStyles(Component.Container)}
+  ${styles(Component.Container)}
 `;
 
 /**
@@ -27,7 +24,7 @@ const NavBarContainer = styled.div`
  */
 // tslint:disable-next-line: variable-name
 const LogoBarItem = styled.img`
-  ${containerStyles(Component.LogoBarItem)}
+  ${styles(Component.LogoBarItem)}
 `;
 
 /**

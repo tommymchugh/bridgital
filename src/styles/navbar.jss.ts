@@ -9,7 +9,8 @@ import {theme} from './theme.jss';
 import {Style, StyleContainer, genStyleBuilder} from '../utils/utils';
 
 export enum Component {
-  Container
+  Container,
+  LogoBarItem
 }
 
 const editorStylesMap: StyleContainer = new Map();
@@ -18,10 +19,21 @@ editorStylesMap.set(
   Component.Container,
   (props?: {}): Style => {
     return `
-    background: ${theme.colors.backgroundDark};
+    background-color: ${theme.colors.backgroundDark};
+    height: ${theme.heights.navbar}px;
     width: 100%;
-    height: calc(100% - ${theme.heights.navbar +
-      theme.heights.projectPicker}px);
+  `;
+  }
+);
+
+editorStylesMap.set(
+  Component.LogoBarItem,
+  (props?: {}): Style => {
+    return `
+    height: 72px;
+    margin: 0px auto;
+    display: block;
+    padding-top: 10px;
   `;
   }
 );

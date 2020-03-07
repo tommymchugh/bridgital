@@ -5,6 +5,10 @@ declare module 'styled-components' {
     colors: {
       backgroundLight: string
       backgroundDark: string
+    },
+    heights: {
+      navbar: number,
+      projectPicker: number
     }
   }
 }

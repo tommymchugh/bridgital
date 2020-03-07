@@ -7,7 +7,7 @@
 
 import {theme} from './theme.jss';
 
-const styles = (props: {} | null): string => {
+const styles = (props?: {}): string => {
   return `
     background-color: ${theme.colors.backgroundLight};
     height: 100%;
